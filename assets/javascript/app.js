@@ -3,7 +3,7 @@ $(document).on("click", "#start", function() {
   game.start();
 });
 
-var card = $("#quiz");
+var main = $("#quiz");
 
 var questions = [
   {
@@ -67,7 +67,7 @@ var game = {
   },
 
   start: function() {
-    timer = setInterval(game.countdown, 1000);
+    timer = setInterval(game.countdown, 1 * 1000);
 
     $("#content-time").prepend(
       "<h2>Time Remaining: <span id='counter-number'>120</span> Seconds</h2>"
@@ -76,18 +76,18 @@ var game = {
     $("#start").remove();
 
     for (var i = 0; i < questions.length; i++) {
-      card.append("<h2>" + questions[i].question + "</h2>");
+      main.append("<h2>" + questions[i].question + "</h2>");
       for (var j = 0; j < questions[i].answers.length; j++) {
-        card.append("<input type='radio' name='question-" + i +
+        main.append("<input type='radio' name='question-" + i +
           "' value='" + questions[i].answers[j] + "''>" + questions[i].answers[j]);
       }
     }
 
-    card.append("<button id='done'>Done</button>");
+    main.append("<button id='done'>Done</button>");
   },
 
   done: function() {
-    var inputs = card.children("input:checked");
+    var inputs = main.children("input:checked");
     for (var i = 0; i < inputs.length; i++) {
       if ($(inputs[i]).val() === questions[i].correctAnswer) {
         game.correct++;
@@ -101,15 +101,15 @@ var game = {
   result: function() {
     clearInterval(timer);
 
-    $("#sub-wrapper h2").remove();
+    $("#content-time h2").remove();
 
-    card.html("<h2>All Done!</h2>");
-    card.append("<h3>Correct Answers: " + this.correct + "</h3>");
-    card.append("<h3>Incorrect Answers: " + this.incorrect + "</h3>");
+    main.html("<h2>All Done!</h2>");
+    main.append("<h3>Correct Answers: " + this.correct + "</h3>");
+    main.append("<h3>Incorrect Answers: " + this.incorrect + "</h3>");
   }
 };
 
 
 $(document).on("click", "#done", function() {
   game.done();
-});
+}); // game finished
