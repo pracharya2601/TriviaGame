@@ -1,7 +1,16 @@
 # TriviaGame
+<h1>Overview:</h1>
+<p>
+This is Trivia game. Player has 120 second to answer all the questions. In case of timeout, answer will be submitted as Unanswered. .
+On result screen, player will see the number of correct answer, incorrect answer and the ginal score of the game.
+<p>
+<h2>Technololy used:</h2>
+<ul>
+<li>HTML</li>
+<li>CSS</li>
+<li>JavaScript</li>
+<li>jQuery</li>
+</ul>
 
-In this assignment, You'll create a Trivia game using JavaScript for the logic and jQuery to manipulate HTML. Be sure to layout this app with valid HTML and stylish CSS.
-
-You'll create a trivia form with multiple choice or true/false options (your choice). The player will have a limited amount of time to finish the quiz. The game ends when the time runs out. The page will reveal the number of questions that players answer correctly and incorrectly. Don't let the player pick more than one answer per question. Don't forget to include a countdown timer.
 
 Check Out: https://pracharya2601.github.io/TriviaGame/
