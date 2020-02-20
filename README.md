@@ -12,5 +12,15 @@ On result screen, player will see the number of correct answer, incorrect answer
 <li>jQuery</li>
 </ul>
 
+<h2>Screenshot</h2>
+<div align="center">
+    <img src="assets/images/a.png" width="700px"> 
+</div>
+<div align="center">
+    <img src="assets/images/b.png" width="700px"> 
+</div>
+<div align="center">
+    <img src="assets/images/c.png" width="700px"> 
+</div>
 
 Check Out: https://pracharya2601.github.io/TriviaGame/
